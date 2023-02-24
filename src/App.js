@@ -2,7 +2,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { ThemeProvider } from 'react-native-ios-kit';
 import HomeScreen from './screens/HomeScreen';
-import ExampleScreen from './screens/ExampleScreen';
+import EditeNote from './screens/EditeNote';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,10 +19,11 @@ const App = () => {
             }}
           />
           <Stack.Screen
-            name="example"
-            component={ExampleScreen}
+            name="editeNote"
+            component={EditeNote}
             options={{
-              title: 'Example Screen',
+              title: 'Edite Note',
+              headerShown: false,
             }}
           />
         </Stack.Navigator>
