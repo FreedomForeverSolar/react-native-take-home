@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "90065005-d59b-4f19-b6d1-fd0fb4a5a74e",
+		"name": "Mobile Take Home",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17832605"
+	},
+	"item": [
+		{
+			"name": "List Notes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/{{username}}/notes",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"{{username}}",
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Note",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/{{username}}/notes/{{noteId}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"{{username}}",
+						"notes",
+						"{{noteId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Store Note",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"New title here\",\n    \"body\": \"New body here\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/{{username}}/notes",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"{{username}}",
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Note",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Updated title here\",\n    \"body\": \"Updated body here\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/{{username}}/notes/{{noteId}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"{{username}}",
+						"notes",
+						"{{noteId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Destroy Note",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/{{username}}/notes/{{noteId}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"{{username}}",
+						"notes",
+						"{{noteId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
